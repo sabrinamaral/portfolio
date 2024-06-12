@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Caramel
+- Font Author: Copyright 2004-2021 The Caramel Project Authors (https://github.com/googlefonts/caramel)
+- Font Source: https://fonts.gstatic.com/s/caramel/v7/P5sCzZKBbMTf_ShyxCRuiZ-uydg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
