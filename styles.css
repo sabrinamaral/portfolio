@@ -347,3 +347,27 @@ form .hidden {
     padding-top: 60px;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .hero h1 {
+    font-size: 18px;
+  }
+  .hero h2 {
+    font-size: 16px;
+  }
+  .hero P {
+    font-size: 14px;
+  }
+
+  #hero-avatar {
+    top: 180px;
+  }
+
+  .logo {
+    padding: 0 16px;
+  }
+
+  .links {
+    gap: 8px;
+  }
+}
