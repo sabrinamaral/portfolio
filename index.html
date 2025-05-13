@@ -21,14 +21,6 @@
       sizes="16x16"
       href="assets/favicon-caramel/favicon-16x16.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="manifest" href="assets/favicon-caramel/site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <script
@@ -37,168 +29,28 @@
     ></script>
   </head>
   <body>
-    <nav>
-      <div class="navbar">
-        <a href="#main">
-          <img
-            src="assets/favicon-caramel/android-chrome-192x192.png"
-            alt="logo"
-            class="logo"
-          />
-        </a>
-        <ul class="links">
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-    </nav>
-    <ul class="social">
-      <li>
-        <a href="https://github.com/sabrinamaral" target="_blank">
-          <i class="fa-brands fa-github icon"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/sabrinamaral/" target="_blank">
-          <i class="fa-brands fa-linkedin icon"></i>
-        </a>
-      </li>
-    </ul>
-    <main>
+    <nav-bar class="navbar"></nav-bar>
+    <main class="main-index">
       <div class="hero">
         <div class="hero-text">
           <h2>Hello there!</h2>
-          <h1>I'm Sabrina Amaral</h1>
+          <h1>I'm <span>Sabrina Amaral</span></h1>
           <p>
-            I've been working as a finance administrator for the past ten years.
-            In 2021, I discovered web development as a new passion, further
-            enriching my skill set.
+            After over a decade in corporate finance, I made a bold move into
+            web development, and I’m thrilled with it! Over the past four years,
+            I’ve honed my skills through programs like the Le Wagon Bootcamp,
+            where I collaborated with teams to build real-world projects using
+            Agile methodologies. Check out some of my
+            <a class="project-link" href="/projects.html">projects</a> to get a
+            glimpse into my work.
           </p>
         </div>
         <img src="assets/Avatar.png" alt="avatar" id="hero-avatar" />
       </div>
-      <div class="about">
-        <h2>About me</h2>
-        <div class="about-card-content">
-          <div class="about-card">
-            <i class="fa-solid fa-bullseye"></i>
-            <p>
-              Professional with a strong attention to detail. Demonstrated
-              ability to strategically plan and execute impactful changes.
-            </p>
-          </div>
-          <div class="about-card">
-            <i class="fa-solid fa-hourglass-half"></i>
-            <p>
-              Very organized individual with excellent time management skills
-              and a knack for problem-solving.
-            </p>
-          </div>
-          <div class="about-card">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <p>Quick learner who is always eager to learn new things.</p>
-          </div>
-        </div>
-      </div>
-      <div class="work">
-        <h2>Projects</h2>
-        <div class="work-card">
-          <div class="work-card-content">
-            <img
-              src="assets/flow_bw.png"
-              data-hover="assets/flow_color.png"
-              alt="thumbnail of flow project"
-              class="hover-img"
-            />
-            <div class="work-card-text">
-              <h3>Flow</h3>
-              <p>
-                This app was created as the final project for the CS50x Harvard
-                course. This tool was designed to create an interactive cash
-                flow system that allows users to import transactions from a CSV
-                file. Instead of manually managing incomes and expenses in
-                Excel, save the data as a CSV file and upload it here. The tool
-                will then generate a daily balance, summarize all expenses and
-                incomes, and organize the transactions by date.
-              </p>
-            </div>
-          </div>
-          <div class="work-card-content">
-            <img
-              src="assets/typeless_bw.png"
-              data-hover="assets/typeless_color.png"
-              alt="thumbnail of typeless project"
-              class="hover-img"
-            />
-            <div class="work-card-text work-card-left-text">
-              <h3>Typeless</h3>
-              <p>
-                This application was created as the final project for Le Wagon
-                Bootcamp. In a group of four, we had about three weeks to make
-                it. The project's standout feature was the seamless ability to
-                record an expense by uploading a receipt.
-              </p>
-            </div>
-          </div>
-          <div class="work-card-content">
-            <img
-              src="assets/castles_bw.png"
-              data-hover="assets/castles_color.png"
-              alt="thumbnail of castles project"
-              class="hover-img"
-            />
-            <div class="work-card-text">
-              <h3>Royal Stays</h3>
-              <p>
-                This project was made as part of Le Wagon Bootcamp. The
-                application has the following features: user authentication,
-                add, edit, and delete castles, and a map to show the castles'
-                locations. It is also possible to create a reservation from the
-                guest site and manage the reservations from the host site.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="contact-container bg-black">
-        <form
-          action="https://formspree.io/f/mleqqejd"
-          method="post"
-          class="contact-form bg-black"
-        >
-          <h2>Contact</h2>
-          <input type="text" name="_gotcha" class="hidden" />
-          <div class="input bg-black">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="off" />
-          </div>
-          <div class="input bg-black">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="off" />
-          </div>
-          <div class="input bg-black">
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-          </div>
-          <input type="submit" value="Submit" class="submit-button" />
-        </form>
-      </div>
-      <footer>
-        <ul class="social-footer">
-          <li>
-            <a href="https://github.com/sabrinamaral" target="_blank">
-              <i class="fa-brands fa-github icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/sabrinamaral/" target="_blank">
-              <i class="fa-brands fa-linkedin icon"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
     </main>
+    <social-links class="social"></social-links>
     <script src="script.js"></script>
+    <script src="navBar.js"></script>
+    <script src="socialLinks.js"></script>
   </body>
 </html>
