@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   var hoverImages = document.querySelectorAll(".hover-img");
+  const aboutCards = document.querySelectorAll(".card");
+  aboutCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  });
 
   hoverImages.forEach(function (img) {
     var originalSrc = img.src;

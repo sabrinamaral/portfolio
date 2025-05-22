@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sabrinamaral</title>
+    <title>contact</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,24 +30,29 @@
   </head>
   <body>
     <nav-bar class="navbar"></nav-bar>
-    <main class="main-index">
-      <div class="hero">
-        <div class="hero-text">
-          <h2>Hello there!</h2>
-          <h1>I'm <span>Sabrina Amaral</span></h1>
-          <p>
-            After over a decade in corporate finance, I made a bold move into
-            web development, and I’m thrilled with it! Over the past four years,
-            I’ve honed my skills through programs like the Le Wagon Bootcamp,
-            where I collaborated with teams to build real-world projects using
-            Agile methodologies. Check out some of my
-            <a class="project-link" href="/projects.html">projects</a> to get a
-            glimpse into my work.
-          </p>
+    <div class="contact-container bg-black">
+      <form
+        action="https://formspree.io/f/mleqqejd"
+        method="post"
+        class="contact-form bg-black"
+      >
+        <h2>Contact</h2>
+        <input type="text" name="_gotcha" class="hidden" />
+        <div class="input bg-black">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="off" />
         </div>
-        <img src="assets/Avatar.png" alt="avatar" id="hero-avatar" />
-      </div>
-    </main>
+        <div class="input bg-black">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="off" />
+        </div>
+        <div class="input bg-black">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <input type="submit" value="Submit" class="submit-button" />
+      </form>
+    </div>
     <social-links class="social"></social-links>
     <script src="script.js"></script>
     <script src="navBar.js"></script>

@@ -1,84 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@100..900&display=swap");
+
+/* GLOBAL */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+main {
   background-color: #fff;
 }
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  padding: 20px 50px;
-  padding-right: 80px;
-  z-index: 2;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding-right: 30px;
-}
-
-.social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  gap: 20px;
-  padding: 280px 64px;
-  list-style: none;
-  font-size: 32px;
-  height: 100%;
-  background-color: transparent;
-  mix-blend-mode: difference;
-}
-
-.social li a {
-  mix-blend-mode: difference;
-  color: #000;
-}
-
-.social li a:hover {
-  color: grey;
-}
-
-main {
-  padding-top: 170px;
-}
-
-.logo {
-  height: 52px;
-}
-
-.hero {
-  width: 70%;
-  margin: 28px auto;
-  margin-bottom: 120px;
-  border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 p {
   line-height: 24px;
-  font-size: 18px;
+  font-size: 1.1em;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
 }
-
 h1,
 h2,
 h3 {
@@ -87,64 +25,229 @@ h3 {
   font-style: normal;
 }
 
-.hero-text {
-  width: 520px;
-  margin: 0 auto;
+/* INDEX */
+
+.main-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#hero-avatar {
-  height: 296px;
+.hero {
+  width: 80%;
+  border-left: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  align-items: center;
 }
+.hero-text {
+  width: 680px;
+  margin: 5em;
+}
+.hero-text h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.1em;
+}
+.hero-text h1 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+}
+.hero-text h1 span {
+  font-size: 1.2em;
+  color: #2191fb;
+  padding-bottom: 0.6em;
+}
+.hero-text p {
+  line-height: 1.8;
+}
+#hero-avatar {
+  height: 15em;
+  border: silver 5px solid;
+  border-radius: 50%;
+}
+.project-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+}
+.project-link:hover {
+  color: #2191fb;
+}
+
+/* ABOUT */
 
 .about {
-  width: 100%;
-  height: 616px;
+  height: 100vh;
   background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .about h2 {
-  background-color: #000;
   color: #fff;
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 1.5em;
+  font-size: 2em;
 }
-
-.about-card-content {
+.about-card-container {
   display: flex;
   gap: 20px;
-  background-color: #000;
 }
-
 .about-card {
-  background-color: #fff;
+  perspective: 1000px;
   width: 344px;
   height: 296px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
-
-.about-card p {
-  padding: 24px;
+.about-card h3 {
+  font-size: 1.5em;
+  text-transform: capitalize;
 }
-
 .about-card i {
   font-size: 32px;
+  margin-bottom: 0.6em;
 }
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f8f8f8;
+  border-radius: 16px;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+.card-back ul li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card-back ul li i {
+  margin-right: 0.6em;
+  height: auto;
+}
+.hard-skills {
+  display: flex;
+}
+/* RESPONSIVE */
+
+@media screen and (max-width: 1050px) {
+  .hero {
+    border-left: none;
+    border-bottom-left-radius: unset;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero-text {
+    margin: 2em;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .hero {
+    border: none;
+  }
+  .hero-text {
+    font-size: 1em;
+    margin: 0 3em;
+  }
+  .hero-text h1 {
+    padding-bottom: 1em;
+  }
+  #hero-avatar {
+    height: 13em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  nav-bar {
+    nav {
+      padding: 1em;
+    }
+  }
+  #hero-avatar {
+    height: 10em;
+    position: absolute;
+    top: 145px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hero {
+    width: 100%;
+    border: none;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-text {
+    margin-top: 14em;
+    width: 70%;
+  }
+  .hero-text h1 {
+    font-size: 1.4em;
+  }
+  .hero-text p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  nav-bar {
+    .links {
+      display: none;
+    }
+  }
+  .hero-text {
+    width: 100vw;
+    margin-top: 15em;
+  }
+  .hero-text h1 {
+    font-size: 1.3em;
+    padding-bottom: 0.8em;
+  }
+  .hero-text h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero-text p {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+}
+/* ____________________________________________________ */
+
+/* TO BE REVISED */
+/* ____________________________________________________ */
+
+/* PROJECTS */
 
 .work {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
 }
 
 .work h2 {
@@ -186,16 +289,18 @@ h3 {
   font-size: 24px;
 }
 
+/* CONTACT */
+
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
-  height: 616px;
+  padding-top: 180px;
+  height: 100vh;
 }
 
 .contact-form {
-  width: 60%;
+  width: 50%;
   padding: 0 50px;
 }
 
@@ -234,7 +339,7 @@ textarea,
 }
 
 .submit-button {
-  border: 2px solid #fff !important;
+  border: 1px solid #fff !important;
   color: #fff;
   padding: 16px 32px;
   margin-top: 16px;
@@ -243,131 +348,9 @@ textarea,
 }
 
 .submit-button:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #2191fb;
 }
 
 form .hidden {
   display: none;
-}
-
-.social-footer {
-  display: none;
-}
-
-/* Responsive */
-
-@media screen and (max-width: 1300px) {
-  .hero-text {
-    padding: 32px;
-  }
-
-  .about {
-    height: 100%;
-    padding: 50px 0;
-  }
-
-  .about-card {
-    width: 65%;
-  }
-
-  .about-card-content {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .work-card-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .social {
-    display: none;
-  }
-
-  .hero {
-    padding: 20px;
-    text-align: center;
-  }
-
-  #hero-avatar {
-    width: 20%;
-    height: auto;
-    position: absolute;
-    top: 170px;
-    border: silver 5px solid;
-    border-radius: 50%;
-  }
-
-  .hero-text {
-    padding-top: 100px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .work {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
-  .contact-form {
-    width: 100%;
-  }
-  .contact-form .input {
-    padding-bottom: 10px;
-  }
-  .contact-container {
-    height: 100%;
-  }
-
-  .social-footer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    list-style: none;
-    font-size: 32px;
-    background-color: transparent;
-  }
-  .social-footer li a {
-    color: #000;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  #hero-avatar {
-    top: 160px;
-  }
-
-  .hero-text {
-    padding-top: 60px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .hero h1 {
-    font-size: 18px;
-  }
-  .hero h2 {
-    font-size: 16px;
-  }
-  .hero P {
-    font-size: 14px;
-  }
-
-  #hero-avatar {
-    top: 180px;
-  }
-
-  .logo {
-    padding: 0 16px;
-  }
-
-  .links {
-    gap: 8px;
-  }
 }
