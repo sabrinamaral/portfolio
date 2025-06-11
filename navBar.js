@@ -4,7 +4,7 @@ template.innerHTML = `
     nav {
       position: fixed;
       width: 100%;
-      background-color: #fff;
+        background-color: rgb(255, 255, 255, 0.7);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -16,6 +16,9 @@ template.innerHTML = `
       font-weight: 300;
       font-style: normal;
     }
+      nav-bar {
+        flex: 0 0 96px; /* or your navbar height */
+      }
 
     .logo {
       height: 52px;
@@ -24,7 +27,6 @@ template.innerHTML = `
     .links {
       display: flex;
       gap: 20px;
-      list-style: none;
     }
 
     .links a {
@@ -36,7 +38,7 @@ template.innerHTML = `
     .links a.active {
       color: #fff;
       background-color: #2191FB;
-      padding: .4em .7em;
+      padding: 0.3em 0.4em;
       border-radius: .4em;
       font-weight: 500;
     }
@@ -59,10 +61,9 @@ template.innerHTML = `
     }
 
     .panel-links li {
-      background: #4d4d4d;
+      background: #7c7d7d;
       margin: .5em 0;
       padding: 1em 0;
-      list-style: none;
     }
 
     .panel-links li a {
@@ -105,9 +106,9 @@ template.innerHTML = `
     <div id="panel-menu" class="hidden">
       <ul class="panel-links">
         <li><a href="/">home</li></a>
-        <li><a href="./about.html">about</li></a>
-        <li><a href="./projects.html">projects</li></a>
-        <li><a href="./contact.html">contact</li></a>
+        <li><a href="/about.html">about</li></a>
+        <li><a href="/projects.html">projects</li></a>
+        <li><a href="/contact.html">contact</li></a>
       </ul>
       <social-links class="social social-panel"></social-links>
     </div>
