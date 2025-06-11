@@ -5,18 +5,17 @@ socialLinksTemplate.innerHTML = `
 
     .social {
       display:flex;
+      justify-content: center;
       gap: 20px;
-      position: fixed;
-      bottom: 0;
-      left: 47%;
+      margin: 0;
+      padding: 0;
       list-style: none;
       font-size: 32px;
       background-color: transparent;
-      padding: 0;
     }
 
     .social li a {
-      color: #2191FB;
+      color: #000;
     }
 
     .social li a:hover {
