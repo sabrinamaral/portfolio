@@ -46,6 +46,7 @@ template.innerHTML = `
     .menu {
       display: none;
     }
+
     /* PANEL HAMBURGER MENU */
 
     .hidden {
@@ -55,7 +56,8 @@ template.innerHTML = `
     #panel-menu {
       background: #191919;
       position: absolute;
-      top: 78px;
+      top: 90px;
+      left: 0;
       width: 100vw;
       height: 100vh;
     }
@@ -85,7 +87,6 @@ template.innerHTML = `
         display: block;
       }
   }
-
   </style>
 
   <nav>
@@ -150,6 +151,26 @@ class NavBar extends HTMLElement {
 
     const menu = this.querySelector(".menu");
     menu.addEventListener("click", open);
+
+    // change background color only for projects page base on scrolling
+    const isProjectsPage = window.location.pathname.endsWith("/projects.html");
+    const nav = this.querySelector("nav");
+    if (isProjectsPage) {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          nav.style.backgroundColor = "#fff";
+        } else {
+          nav.style.backgroundColor = "rgba(255,255,255,0.7)";
+        }
+      };
+      window.addEventListener("scroll", handleScroll);
+      this.handleScroll();
+    }
+  }
+  disconnectedCallback() {
+    if (this.isProjectsPage && this.handleScroll) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
   }
 }
 window.customElements.define("nav-bar", NavBar);
