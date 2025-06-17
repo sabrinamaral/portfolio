@@ -178,53 +178,6 @@ li {
 /* TO BE REVISED */
 /* ____________________________________________________ */
 
-/* PROJECTS */
-
-.work {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.work h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
-}
-
-.work-card {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  gap: 20px;
-}
-
-.work-card img {
-  width: 344px;
-  border: #000 1px solid;
-  padding: 20px;
-  border-radius: 16px;
-  transition: transform 0.3s;
-}
-
-.work-card img:hover {
-  transform: scale(1.05);
-}
-
-.work-card-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.work-card-text {
-  padding: 30px;
-}
-
-.work-card-text h3 {
-  padding-bottom: 16px;
-  font-size: 24px;
-}
-
 /* CONTACT */
 
 .contact-container {
