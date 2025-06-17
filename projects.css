@@ -1,0 +1,59 @@
+/* PROJECTS */
+
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5em;
+}
+
+.work h2 {
+  color: #000;
+  margin: 1.2em 0;
+  font-size: 2em;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 24px;
+}
+
+.work-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 2.5em;
+}
+
+.work-card-text h3 {
+  padding-bottom: 16px;
+  font-size: 24px;
+}
+
+.work-card-text p {
+  line-height: 2em;
+}
+
+.work-card-text span {
+  font-weight: 500;
+}
+
+.project-link a,
+.demo-link a {
+  text-decoration: none;
+  color: #2191fb;
+}
+
+.project-link,
+.demo-link {
+  text-align: right;
+  font-weight: 600;
+}
+
+.demo-link {
+  margin-bottom: 0.5em;
+}
