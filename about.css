@@ -92,7 +92,7 @@
 .modal p a {
   color: #000;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 .modal p a:hover {
   color: #7c7d7d;
@@ -277,6 +277,11 @@
   font-size: 0.9em;
   text-align: center;
 }
+
+.books-thumb .img-thumb {
+  cursor: pointer;
+}
+
 /* OVERLAY ENLARGED BOOKS AND CERTIFICATES */
 
 .enlarged-thumb-overlay {

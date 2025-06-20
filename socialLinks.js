@@ -14,17 +14,17 @@ socialLinksTemplate.innerHTML = `
       background-color: transparent;
     }
 
-    .social li a {
-      color: #000;
+    a {
+      color: #fff;
     }
 
-    .social li a:hover {
-      color: grey;
+    a:hover {
+      color: #2191fb !important;
     }
 
     .social .fa-brands, .fab::before {
-      margin-bottom: .8em;
-    }
+    margin-bottom: .8em;
+  }
 
     @media screen and (max-width: 890px) {
       .social {
@@ -40,26 +40,39 @@ socialLinksTemplate.innerHTML = `
     }
 
   </style>
-  <ul class="social">
-    <li>
-      <a href="https://github.com/sabrinamaral" target="_blank">
-        <i class="fa-brands fa-github icon"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/sabrinamaral/" target="_blank">
-        <i class="fa-brands fa-linkedin icon"></i>
-      </a>
-    </li>
-  </ul>
+  <footer>
+    <ul class="social">
+      <li>
+        <a href="https://github.com/sabrinamaral" target="_blank">
+          <i class="fa-brands fa-github icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/sabrinamaral/" target="_blank">
+          <i class="fa-brands fa-linkedin icon"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
   `;
-
 class SocialLinks extends HTMLElement {
   constructor() {
     super();
 
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(socialLinksTemplate.content.cloneNode(true));
+    const socialContainer = this.shadowRoot.querySelector(".social");
+
+    if (window.location.pathname.endsWith("/contact.html")) {
+      if (socialContainer) {
+        socialContainer.style.backgroundImage = "none";
+        socialContainer.style.backgroundColor = "#000";
+      }
+    } else {
+      socialContainer.querySelectorAll("a").forEach(function (a) {
+        a.style.color = "#000";
+      });
+    }
   }
 }
 

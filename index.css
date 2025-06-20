@@ -7,7 +7,7 @@
   padding: 0;
 }
 body {
-  background-color: #fff;
+  background-color: #d3d3d3;
   background-image: url("./assets/textur.jpg");
   background-size: cover;
   min-height: 100vh;
@@ -78,10 +78,11 @@ li {
 }
 .project-link {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 600;
   color: #000;
   cursor: pointer;
 }
+
 .project-link:hover {
   color: #7c7d7d;
 }
@@ -172,74 +173,4 @@ li {
     font-size: 0.9em;
     line-height: 1.6;
   }
-}
-/* ____________________________________________________ */
-
-/* TO BE REVISED */
-/* ____________________________________________________ */
-
-/* CONTACT */
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 180px;
-  height: 100vh;
-}
-
-.contact-form {
-  width: 50%;
-  padding: 0 50px;
-}
-
-.contact-form .input {
-  padding-bottom: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  border: none;
-  border-bottom: 1px solid #fff;
-  width: 100%;
-  font-size: 16px;
-  outline: none;
-}
-
-.bg-black,
-label,
-input,
-textarea,
-.contact-form h2 {
-  background-color: #000;
-  color: #fff;
-  font-size: 20px;
-}
-
-.contact-form h2 {
-  text-align: center;
-  padding-bottom: 40px;
-  font-size: 36px;
-}
-
-.contact-form textarea {
-  margin-top: 10px;
-  height: 40px;
-}
-
-.submit-button {
-  border: 1px solid #fff !important;
-  color: #fff;
-  padding: 16px 32px;
-  margin-top: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.submit-button:hover {
-  background-color: #2191fb;
-}
-
-form .hidden {
-  display: none;
 }
