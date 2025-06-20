@@ -1,5 +1,3 @@
-// ABOUT PAGE
-
 // MODAL
 const modal = document.getElementById("modal");
 const closeBtn = document.querySelector(".close");
@@ -12,19 +10,27 @@ const closeEnlargedImgBtn = overlay.querySelector(".close-enlarged-thumb");
 
 // OPEN MODAL
 function openModal(title, card) {
-  const cardBack = card.querySelector(".card-back"); // Select the card-back content
+  // Select the card-back content
+  const cardBack = card.querySelector(".card-back");
   if (cardBack) {
     modalBody.innerHTML = `<h2>${title}</h2>${cardBack.innerHTML}`;
     modal.style.display = "block";
   }
-  // ENLARGE IMG | add event listeners to .img-thumb elements
+  // Set the image src to the overlay (enlarged image)
+  function enlargeImg() {
+    overlay.classList.remove("hidden");
+    overlayImg.src = this.firstElementChild.getAttribute("src");
+  }
+  // Add event listeners
   modalBody.querySelectorAll(".img-thumb").forEach(function (thumb) {
-    thumb.addEventListener("click", function () {
-      overlay.classList.remove("hidden");
-      overlayImg.src = this.firstElementChild.getAttribute("src");
-    });
+    thumb.addEventListener("click", enlargeImg);
   });
 }
+// Remove event listeners after use it
+modalBody.querySelectorAll(".img-thumb").forEach(function (thumb) {
+  thumb.removeEventListener("click", enlargeImg);
+});
+
 // CLOSE MODAL
 closeBtn.onclick = function () {
   modal.style.display = "none";
@@ -39,11 +45,4 @@ window.onclick = function (event) {
 closeEnlargedImgBtn.onclick = function () {
   overlay.classList.add("hidden");
   overlayImg.src = "";
-};
-
-// CONTACT PAGE
-window.onbeforeunload = () => {
-  for (const form of document.getElementsByTagName("form")) {
-    form.reset();
-  }
 };
