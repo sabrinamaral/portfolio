@@ -164,13 +164,10 @@ class NavBar extends HTMLElement {
         }
       };
       window.addEventListener("scroll", handleScroll);
-      this.handleScroll();
     }
   }
   disconnectedCallback() {
-    if (this.isProjectsPage && this.handleScroll) {
-      window.removeEventListener("scroll", this.handleScroll);
-    }
+    window.removeEventListener("scroll", this.handleScroll);
   }
 }
 window.customElements.define("nav-bar", NavBar);
