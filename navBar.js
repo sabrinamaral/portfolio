@@ -98,10 +98,10 @@ template.innerHTML = `
     />
     </a>
     <ul class="links">
-    <li><a href="/" class="active">home</li></a>
-    <li><a href="/about.html">about</li></a>
-    <li><a href="/projects.html">projects</li></a>
-    <li><a href="/contact.html">contact</li></a>
+    <li><a href="/portfolio/" class="active">home</li></a>
+    <li><a href="/portfolio/about.html">about</li></a>
+    <li><a href="/portfolio/projects.html">projects</li></a>
+    <li><a href="/portfolio/contact.html">contact</li></a>
     </ul>
     <a class="menu"><i class="fa-solid fa-bars"></i></a>
     <div id="panel-menu" class="hidden">
