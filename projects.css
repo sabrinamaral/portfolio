@@ -14,7 +14,7 @@
 .work-card {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   gap: 24px;
 }
 
@@ -25,6 +25,11 @@
   background-color: rgb(255, 255, 255, 0.6);
   border-radius: 12px;
   padding: 2.5em;
+  gap: 2em;
+}
+
+.work-card-text {
+  width: 60%;
 }
 
 .work-card-text h3 {
@@ -40,18 +45,20 @@
   font-weight: 500;
 }
 
-.project-link a,
-.demo-link a {
+.work-card-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.project-link a {
   text-decoration: none;
   color: #2191fb;
 }
 
-.project-link,
-.demo-link {
-  text-align: right;
+.project-link {
   font-weight: 600;
-}
-
-.demo-link {
-  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  align-self: flex-end;
 }
