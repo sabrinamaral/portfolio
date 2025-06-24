@@ -90,7 +90,7 @@ template.innerHTML = `
   </style>
 
   <nav>
-    <a href="/">
+    <a href="/portfolio/">
     <img
     src="assets/favicon-caramel/android-chrome-192x192.png"
     alt="logo"
