@@ -51,8 +51,12 @@ li {
   align-items: center;
   justify-content: center;
   padding: 3em;
-  border-radius: 2em;
+  border-radius: 1em;
   background-color: rgb(255, 255, 255, 0.5);
+}
+
+.hero-text {
+  margin-left: 2.5em;
 }
 
 .hero-text h2 {
@@ -62,7 +66,7 @@ li {
 
 .hero-text h1 {
   font-size: 1.5em;
-  padding-bottom: 1em;
+  padding-bottom: 0.6em;
 }
 
 .hero-text h1 span {
@@ -79,7 +83,6 @@ li {
   height: 15em;
   border: 4px solid #fff;
   border-radius: 50%;
-  margin-bottom: 2rem;
 }
 
 .project-link {
@@ -97,6 +100,7 @@ li {
 @media screen and (max-width: 1160px) {
   .hero {
     width: 80%;
+    padding: 2em;
   }
   #hero-avatar {
     height: 13em;
@@ -105,13 +109,13 @@ li {
 
 @media screen and (max-width: 768px) {
   .hero {
+    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    padding: 2em;
   }
 
   .hero-text {
-    margin-top: 10rem;
+    margin-left: 0;
   }
 
   .hero-text h1 {
@@ -124,30 +128,15 @@ li {
 
   .hero-text p {
     font-size: 1em;
-    width: 80%;
-    margin: 0 auto;
   }
 
   #hero-avatar {
     height: 10em;
-    position: absolute;
-    top: 280px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 0.5em;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .main-index {
-    align-items: unset;
-    justify-content: unset;
-  }
-
-  .hero {
-    width: 100%;
-    border-radius: 0%;
-  }
-
   .hero-text h1 {
     font-size: 1rem;
   }
@@ -159,11 +148,9 @@ li {
   .hero-text p {
     font-size: 0.85rem;
     line-height: 1.6;
-    width: 90%;
   }
 
   #hero-avatar {
     height: 7.5rem;
-    top: 150px;
   }
 }
