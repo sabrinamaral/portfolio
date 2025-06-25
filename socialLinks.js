@@ -72,30 +72,11 @@ class SocialLinks extends HTMLElement {
         socialContainer.style.backgroundColor = "#000";
       }
     }
-    // apply a white overlay on footer on index page and screens smaller than 780px
-    if (isIndexPage) {
-      this.setBg = () => {
-        const isSmallScreen = window.matchMedia("(max-width: 480px)").matches;
-        if (isSmallScreen) {
-          socialContainer.style.backgroundColor = "rgba(255,255,255,0.5)";
-        } else {
-          socialContainer.style.backgroundColor = "";
-        }
-      };
-      this.setBg();
-      window.addEventListener("resize", this.setBg);
-    }
     // keep the icons color black for all pages but contact page
     if (!isContactPage) {
       socialContainer.querySelectorAll("a").forEach(function (a) {
         a.style.color = "#000";
       });
-    }
-  }
-  // clean the event listener
-  disconnectedCallback() {
-    if (isIndexPage) {
-      window.removeEventListener("resize", this.setBg);
     }
   }
 }
