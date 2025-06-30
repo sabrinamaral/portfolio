@@ -107,8 +107,10 @@ li {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .hero {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
