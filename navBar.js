@@ -154,8 +154,9 @@ class NavBar extends HTMLElement {
 
     // change background color only for projects page base on scrolling
     const isProjectsPage = window.location.pathname.endsWith("/projects.html");
+    const isAboutPage = window.location.pathname.endsWith("/about.html");
     const nav = this.querySelector("nav");
-    if (isProjectsPage) {
+    if (isProjectsPage || isAboutPage) {
       const handleScroll = () => {
         if (window.scrollY > 0) {
           nav.style.backgroundColor = "#fff";
