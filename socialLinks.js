@@ -24,7 +24,7 @@ socialLinksTemplate.innerHTML = `
 
     .social .fa-brands, .fab::before {
     margin-bottom: .8em;
-  }
+    }
 
     @media screen and (max-width: 890px) {
       .social {
