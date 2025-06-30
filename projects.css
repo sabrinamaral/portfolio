@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2.5em;
 }
 
 .work h2 {
   color: #000;
-  margin: 1.2em 0;
+  margin: 1em 0;
   font-size: 2em;
 }
 
@@ -15,7 +14,7 @@
   display: flex;
   flex-direction: column;
   width: 80%;
-  gap: 24px;
+  gap: 1em;
 }
 
 .work-card-content {
@@ -24,17 +23,14 @@
   justify-content: center;
   background-color: rgb(255, 255, 255, 0.6);
   border-radius: 12px;
-  padding: 2.5em;
+  padding: 3em;
   gap: 2em;
-}
-
-.work-card-text {
-  width: 60%;
+  margin-bottom: 1em;
 }
 
 .work-card-text h3 {
-  padding-bottom: 16px;
-  font-size: 24px;
+  margin-bottom: 1em;
+  font-size: 1.5em;
 }
 
 .work-card-text p {
@@ -61,4 +57,15 @@
   font-weight: 600;
   font-size: 1.1em;
   align-self: flex-end;
+}
+
+@media screen and (max-width: 1160px) {
+  .work-card-content {
+    padding: 1em;
+    flex-wrap: wrap;
+  }
+
+  .work-card-text {
+    width: 95%;
+  }
 }
