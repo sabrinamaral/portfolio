@@ -1,19 +1,17 @@
-/* ABOUT */
-
 .about {
-  min-height: calc(100vh - 156px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  overflow-y: auto;
   flex: 1 0 auto;
 }
-.about h2 {
-  color: #000;
-  margin-bottom: 1.5em;
+
+.about-body h2 {
+  margin-top: 3em;
+  text-align: center;
   font-size: 2em;
+  color: #000;
 }
+
 .about-card-container {
   width: 100vw;
   display: flex;
@@ -21,21 +19,21 @@
   flex-wrap: wrap;
   gap: 3em;
 }
-.about-card {
-  width: 300px;
-  height: 260px;
-}
+
 .about-card h3 {
   font-size: 1.5em;
   text-transform: capitalize;
 }
+
 .about-card i {
   font-size: 32px;
   margin-bottom: 0.6em;
   color: #2191fb;
 }
+
 .card-front {
-  height: 100%;
+  width: 260px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,9 +43,11 @@
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 .card-front:hover {
   transform: scale(1.03);
 }
+
 .hidden {
   visibility: hidden;
 }
@@ -79,6 +79,8 @@
   margin-bottom: 0;
   font-size: 1.7em;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.6em;
 }
 .modal h3 {
   color: #2191fb;
@@ -117,11 +119,6 @@
 
 /* HARD SKILLS MODAL */
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr, 1fr));
-  margin-top: 1em;
-}
 .skills-group {
   display: flex;
   flex-direction: column;
@@ -157,7 +154,6 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
 }
 .skill-card i {
   font-size: 1.7em;
@@ -320,4 +316,15 @@
   margin-top: 1em;
   text-align: center;
   font-size: 1.1em;
+}
+
+/* RESPONSIVENESS  */
+
+@media (max-width: 875px) {
+  .about-body h2 {
+    margin: 1em 0;
+  }
+  .about-card-container {
+    margin-bottom: 0.8em;
+  }
 }
