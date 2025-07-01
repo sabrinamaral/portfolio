@@ -31,6 +31,7 @@
 .work-card-text h3 {
   margin-bottom: 1em;
   font-size: 1.5em;
+  color: #2191fb;
 }
 
 .work-card-text p {
@@ -67,5 +68,11 @@
 
   .work-card-text {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  iframe {
+    width: 105%;
   }
 }

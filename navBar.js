@@ -61,16 +61,15 @@ template.innerHTML = `
       width: 100vw;
       height: 100vh;
     }
-
     .panel-links li {
       background: #7c7d7d;
-      margin: .5em 0;
+      margin: 0.5em 0;
       padding: 1em 0;
+      padding-left: 1em;
     }
 
-    .panel-links li a {
+    .panel-links a {
       color: #fff;
-      padding-left: 1em;
       text-decoration: none;
       font-weight: 500;
     }
@@ -86,6 +85,9 @@ template.innerHTML = `
         font-size: 2em;
         display: block;
       }
+      nav {
+        padding: 20px 20px;
+      }
   }
   </style>
 
@@ -98,18 +100,18 @@ template.innerHTML = `
     />
     </a>
     <ul class="links">
-    <li><a href="/portfolio/" class="active">home</li></a>
-    <li><a href="/portfolio/about.html">about</li></a>
-    <li><a href="/portfolio/projects.html">projects</li></a>
-    <li><a href="/portfolio/contact.html">contact</li></a>
+    <a href="/portfolio/" class="active"><li>home</li></a>
+    <a href="/portfolio/about.html"><li>about</li></a>
+    <a href="/portfolio/projects.html"><li>projects</li></a>
+    <a href="/portfolio/contact.html"><li>contact</li></a>
     </ul>
     <a class="menu"><i class="fa-solid fa-bars"></i></a>
     <div id="panel-menu" class="hidden">
       <ul class="panel-links">
-        <li><a href="/portfolio/">home</li></a>
-        <li><a href="/portfolio/about.html">about</li></a>
-        <li><a href="/portfolio/projects.html">projects</li></a>
-        <li><a href="/portfolio/contact.html">contact</li></a>
+        <a href="/portfolio/"><li>home</li></a>
+        <a href="/portfolio/about.html"><li>about</li></a>
+        <a href="/portfolio/projects.html"><li>projects</li></a>
+        <a href="/portfolio/contact.html"><li>contact</li></a>
       </ul>
       <social-links class="social social-panel"></social-links>
     </div>
