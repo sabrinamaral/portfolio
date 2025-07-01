@@ -327,4 +327,23 @@
   .about-card-container {
     margin-bottom: 0.8em;
   }
+  .modal-content {
+    width: 85%;
+    height: 85%;
+    margin: 10% auto;
+    padding: 0.8em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    height: 90%;
+  }
+  .books-thumb {
+    flex-direction: column;
+  }
+  .certificates-grid {
+    border: none;
+    padding: 1em;
+  }
 }
