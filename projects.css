@@ -49,15 +49,26 @@
   justify-items: center;
 }
 
+.work-card-video img {
+  border: 2px #adb5bd solid;
+  border-radius: 4px;
+  width: 300px;
+  height: 176px;
+}
+
 .project-link a {
   text-decoration: none;
   color: #2191fb;
 }
 
 .project-link {
+  display: flex;
+  justify-content: space-between;
   font-weight: 600;
   font-size: 1.1em;
-  align-self: flex-end;
+  width: 100%;
+  padding-top: 0.3rem;
+  padding-inline: 0.5rem;
 }
 
 @media screen and (max-width: 1160px) {
