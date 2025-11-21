@@ -162,6 +162,10 @@
   justify-content: center;
 }
 
+.skill-card img {
+  height: 30px;
+}
+
 /* TOOLTIP */
 
 .skill-card,
