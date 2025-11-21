@@ -1,0 +1,27 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Thumbnails
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+
+# Node.js (if you ever add tooling)
+node_modules/
+
+# Build / dist output (if you add bundling later)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
