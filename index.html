@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sabrinamaral</title>
+    <title>sabrinamaral web developer</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -22,34 +22,300 @@
       href="assets/favicon-caramel/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/favicon-caramel/site.webmanifest" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/094bef2f75.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <nav-bar class="navbar"></nav-bar>
-    <main class="main-index">
-      <div class="hero">
-        <img src="assets/Avatar_3.jpeg" alt="avatar" id="hero-avatar" />
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <!-- NAVBAR -->
+    <nav id="nav" class="">
+      <a href="#">
+        <img
+          src="assets/favicon-caramel/android-chrome-192x192.png"
+          alt="logo"
+          class="nav-logo"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- HERO SECTION-->
+      <section class="hero">
         <div class="hero-text">
-          <h2>Hello there!</h2>
-          <h1>I'm <span>Sabrina Amaral</span></h1>
-          <p>
-            After over a decade in corporate finance, I made a bold move into
-            web development, and I’m thrilled with it! Over the past four years,
-            I’ve honed my skills through programs like the Le Wagon Bootcamp,
-            where I collaborated with teams to build real-world projects using
-            Agile methodologies. Check out some of my
-            <a class="project-link" href="/portfolio/projects.html">projects</a>
-            to get a glimpse into my work.
+          <div class="hero-eyebrow">Web Developer</div>
+          <h1 class="hero-name">
+            Sabrina
+            <em>Amaral</em>
+          </h1>
+          <p class="hero-desc">
+            From corporate finance to full-stack development — I build
+            thoughtful web experiences that bridge analytical rigour with
+            creative craft.
           </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">View Projects →</a>
+            <a href="#contact" class="btn-ghost">Say Hello</a>
+          </div>
+        </div>
+      </section>
+      <!-- SCROLL HINT -->
+      <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        Scroll
+      </div>
+      <!-- STATS BAR -->
+      <div class="stats-bar">
+        <div class="stat reveal visible">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years in Finance</div>
+        </div>
+        <div class="stat reveal reveal-delay-1 visible">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Years in Dev</div>
+        </div>
+        <div class="stat reveal reveal-delay-2 visible">
+          <div class="stat-num"><span>&#8734;</span></div>
+          <div class="stat-label">Curiosity</div>
         </div>
       </div>
+      <!-- ABOUT ME -->
+      <section class="about" id="about">
+        <div class="about-grid">
+          <div class="reveal visible">
+            <div class="section-tag">About me</div>
+            <h2 class="about-title">A bold<br />career <em>pivot</em></h2>
+          </div>
+          <div class="reveal reveal-delay-1 visible">
+            <p class="about-body">
+              I’m a web developer passionate about building efficient,
+              user‑friendly solutions. From creating applications that automate
+              repetitive tasks to designing smooth interfaces. I love turning
+              complex problems into simple, elegant code. My work reflects
+              strong attention to detail and a commitment to clean, maintainable
+              development practices. With years of remote experience, I’ve
+              mastered time management and collaboration across distributed
+              teams. Guided by a mindset of lifelong learning, I continuously
+              refine my skills in modern frameworks and tools, embracing new
+              challenges with curiosity and persistence.
+            </p>
+            <!-- <div class="skills-row">
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">React</span>
+                <span class="skill-chip">Next</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">TypeScript</span>
+                <span class="skill-chip">Ruby on Rails</span>
+                <span class="skill-chip">HTML &amp; CSS</span>
+                <span class="skill-chip">PostgreSQL</span>
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">Agile / Scrum</span>
+                <span class="skill-chip">Figma</span>
+              </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- MARQUEE -->
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span class="marquee-item">Ruby on Rails</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">JavaScript</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">React</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">Agile Methodology</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">PostgreSQL</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">UX Design</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">Tailwind</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">Figma</span>
+          <span class="marquee-dot"></span>
+          <span class="marquee-item">Next</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">Systems Analysis and Development</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">HTML &amp; CSS</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">Media Queries</span
+          ><span class="marquee-dot"></span>
+          <span class="marquee-item">Git</span><span class="marquee-dot"></span>
+        </div>
+      </div>
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-tag reveal visible">Projects</div>
+        <h2 class="reveal reveal-delay-1 visible">
+          Selected
+          <em>work</em>
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card reveal visible">
+            <div class="project-num">01</div>
+            <div class="project-title">Typeless</div>
+            <p class="project-desc">
+              A collaborative platform built during Le Wagon with a team of
+              four, delivering a full-stack solution in two weeks using Agile
+              sprints.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Ruby on Rails</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Heroku</span>
+            </div>
+            <a
+              href="https://github.com/sabrinamaral/typeless"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              >View code →</a
+            >
+          </div>
+          <div class="project-card reveal reveal-delay-1 visible">
+            <div class="project-num">02</div>
+            <div class="project-title">Flow</div>
+            <p class="project-desc">
+              A lightweight yet powerful tool designed to simplify file
+              reconciliation and financial projections. Built with Ruby on
+              Rails, backed by PostgreSQL, and deployed on Railsway, it
+              streamlines the reconciliation process.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Ruby on Rails</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Railway</span>
+            </div>
+            <a
+              href="https://github.com/sabrinamaral/finance_reconciliation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              >View code →</a
+            >
+          </div>
+          <div class="project-card reveal reveal-delay-2 visible">
+            <div class="project-num">03</div>
+            <div class="project-title">This Portfolio</div>
+            <p class="project-desc">
+              This portfolio is more than just a showcase of projects; it’s a
+              statement of transformation, creativity, and adaptability. Every
+              detail, from layout to interaction, was carefully curated to
+              ensure the site retains its individuality and authenticity.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML/CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">GitHub Pages</span>
+            </div>
+            <a
+              href="https://github.com/sabrinamaral/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              >View code →</a
+            >
+          </div>
+          <div class="project-card reveal reveal-delay-2 visible">
+            <div class="project-num">04</div>
+            <div class="project-title">VR Design &amp; Build</div>
+            <p class="project-desc">
+              Developed a responsive website for a construction company,
+              emphasizing clean structure and modern UI. Implemented a project
+              gallery with smooth navigation and optimized performance across
+              devices. The build highlights attention to detail in layout,
+              accessibility, and scalability, ensuring a professional digital
+              presence.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tailwind</span>
+              <span class="project-tag">Netlify</span>
+            </div>
+            <a
+              href="https://vrdesignandbuild.com.au/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              >View website →</a
+            >
+          </div>
+          <div class="project-card reveal reveal-delay-2 visible">
+            <div class="project-num">05</div>
+            <div class="project-title">Olho de Coruja Ateliê</div>
+            <p class="project-desc">
+              Created a playful, nature‑inspired site for an educational
+              atelier. Focused on intuitive navigation, lightweight animations,
+              and mobile‑friendly design to reflect creativity while keeping
+              usability front and center. The project demonstrates how
+              thoughtful front‑end development can translate a brand’s values
+              into a clear, engaging digital experience.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tailwind</span>
+              <span class="project-tag">Netlify</span>
+            </div>
+            <a
+              href="https://olhodecorujatelie.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              >View website →</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="reveal visible">
+          <div class="section-tag">Get in touch</div>
+          <h2>Let's build something <em>together</em></h2>
+          <p>
+            Open to opportunities, collaborations, and interesting
+            conversations.
+          </p>
+          <div class="contact-links">
+            <a
+              href="mailto:sabrinamaral@hotmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              ><i class="fa-regular fa-envelope"></i> Email me</a
+            >
+            <a
+              href="https://github.com/sabrinamaral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/sabrinamaral"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              ><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>© 2025 sabrinamaral</p>
+        <p>Florianópolis, Brazil</p>
+      </footer>
     </main>
-    <social-links class="social"></social-links>
-    <script src="navBar.js"></script>
-    <script src="socialLinks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
