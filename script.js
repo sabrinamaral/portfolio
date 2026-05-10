@@ -1,5 +1,6 @@
 const cursor = document.querySelector('.cursor');
 const cursorRing = document.querySelector('.cursor-ring');
+const nav = document.getElementById('nav');
 
 window.addEventListener('mousemove', (e) => {
   gsap.to(cursor, {
@@ -16,4 +17,12 @@ window.addEventListener('mousemove', (e) => {
     duration: 0.3,
     ease: 'power2.out',
   });
+});
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
 });
