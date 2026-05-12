@@ -549,6 +549,14 @@ PROJECTS
   margin-bottom: 0.75rem;
 }
 
+#projects small {
+  letter-spacing: 1px;
+  color: var(--muted);
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
 .project-desc {
   font-size: clamp(0.88rem, 2vw, 1.2rem);
   line-height: 1.7;
