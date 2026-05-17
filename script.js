@@ -6,6 +6,7 @@ const nav = document.getElementById('nav');
 const closeModal = document.getElementById('modal-close');
 const openModal = document.getElementById('open-modal');
 const modal = document.getElementById('modal-overlay');
+const form = document.getElementById('contact');
 
 window.addEventListener('mousemove', (e) => {
   gsap.to(cursor, {
@@ -38,4 +39,25 @@ closeModal.addEventListener('click', () => {
 
 openModal.addEventListener('click', () => {
   modal.classList.remove('hidden');
+});
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const response = await fetch('https://formspree.io/f/mleqqejd', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { Accept: 'application/json' },
+  });
+
+  if (response.ok) {
+    document.getElementById('form-content').innerHTML = `
+      <h2>Thank <em>you!</em></h2>
+      <p style="color: var(--accent); margin-top: 1rem;">
+        Your message was sent. I'll get back to you soon.
+      </p>
+    `;
+  } else {
+    alert('Something went wrong. Please try again.');
+  }
 });
