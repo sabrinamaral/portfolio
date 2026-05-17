@@ -6,7 +6,7 @@ const nav = document.getElementById('nav');
 const closeModal = document.getElementById('modal-close');
 const openModal = document.getElementById('open-modal');
 const modal = document.getElementById('modal-overlay');
-const form = document.getElementById('contact');
+const form = document.getElementById('contact-form');
 
 window.addEventListener('mousemove', (e) => {
   gsap.to(cursor, {
