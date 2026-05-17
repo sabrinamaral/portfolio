@@ -50,6 +50,7 @@ body {
 
 section {
   padding: 6rem 3rem;
+  scroll-margin-top: 90px;
 }
 
 h2 {
@@ -596,6 +597,10 @@ CONTACT
 .contact {
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 68vh;
+  justify-content: center;
 }
 
 .contact h2 {
@@ -707,7 +712,7 @@ CONTACT
   resize: vertical;
 }
 
-#contact > div > button {
+#contact-form > div > button {
   width: 100%;
   padding: 1rem;
   border-radius: 8px;
