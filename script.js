@@ -1,6 +1,11 @@
+// Animations
 const cursor = document.querySelector('.cursor');
 const cursorRing = document.querySelector('.cursor-ring');
 const nav = document.getElementById('nav');
+// Modal
+const closeModal = document.getElementById('modal-close');
+const openModal = document.getElementById('open-modal');
+const modal = document.getElementById('modal-overlay');
 
 window.addEventListener('mousemove', (e) => {
   gsap.to(cursor, {
@@ -25,4 +30,12 @@ window.addEventListener('scroll', () => {
   } else {
     nav.classList.remove('scrolled');
   }
+});
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+openModal.addEventListener('click', () => {
+  modal.classList.remove('hidden');
 });

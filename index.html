@@ -29,6 +29,58 @@
     ></script>
   </head>
   <body>
+    <!-- MODAL -->
+    <div class="modal-overlay hidden" id="modal-overlay">
+      <div class="modal">
+        <a class="modal-close" id="modal-close">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+        <div class="contact-form-container">
+          <div id="form-content">
+            <h2>Get in <em>touch</em></h2>
+            <form id="contact" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="nome">Name</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Fill in with your full name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="phone"
+                    id="phone"
+                    name="phone"
+                    placeholder="(48) 99999-9999"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" rows="4" cols="50"> </textarea>
+                </div>
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- CURSOR -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
@@ -317,13 +369,9 @@
           <h2>Let's build something <em>together</em></h2>
           <p>Open to opportunities and collaborations.</p>
           <div class="contact-links">
-            <a
-              href="mailto:sabrinamaral@hotmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-link"
-              ><i class="fa-regular fa-envelope"></i> Email</a
-            >
+            <a class="contact-link" id="open-modal">
+              <i class="fa-regular fa-envelope"></i> Email
+            </a>
             <a
               href="https://github.com/sabrinamaral"
               target="_blank"
